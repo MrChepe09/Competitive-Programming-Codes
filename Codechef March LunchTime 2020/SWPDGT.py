@@ -16,13 +16,13 @@ def swap_sum(a, b):
         break
     return (strl(la, lb))
   else:
-    mins = min(int(a), int(b))
-    if(mins == int(a)):
-      if(la[0]<lb[1]):
-        la[0], lb[1] = lb[1], la[0]
+    maxs = max(int(la[1]), int(lb[1]))
+    if(maxs == int(la[1])):
+      if(la[1]>lb[0]):
+        la[1], lb[0] = lb[0], la[1]
     else:
-      if(lb[0]<la[1]):
-        lb[0], la[1] = la[1], lb[0]
+      if(lb[1]>la[0]):
+        lb[1], la[0] = la[0], lb[1]
     return(strl(la, lb))  
 
 def strl(la, lb):
