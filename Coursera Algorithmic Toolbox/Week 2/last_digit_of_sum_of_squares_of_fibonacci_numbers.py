@@ -13,9 +13,7 @@ def last_digit(f):
     pre, cur = cur, pre+cur
   return((cur-1)%10)
 
-test = int(input())
-for i in range(test):
-  a = int(input())
-  t2 = (last_digit(a) - last_digit(a-1))
-  t1 = (last_digit(a-1)+1)
-  print((t1*t2)%10)
+a = int(input())
+t2 = (last_digit(a) - last_digit(a-1))
+t1 = (last_digit(a-1)+1)
+print((t1*t2)%10)

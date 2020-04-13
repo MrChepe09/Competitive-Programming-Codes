@@ -13,7 +13,5 @@ def last_digit(f, n):
     pre, cur = cur, pre+cur
   return(cur%n)
 
-test = int(input())
-for i in range(test):
-  f, n = map(int, input().split())
-  print(last_digit(f, n))
+f, n = map(int, input().split())
+print(last_digit(f, n))

@@ -13,7 +13,5 @@ def last_digit(f):
     pre, cur = cur, pre+cur
   return((cur-1))
 
-test = int(input())
-for i in range(test):
-  a, b = map(int, input().split())
-  print((last_digit(b)-last_digit(a-1))%10)
+a, b = map(int, input().split())
+print((last_digit(b)-last_digit(a-1))%10)

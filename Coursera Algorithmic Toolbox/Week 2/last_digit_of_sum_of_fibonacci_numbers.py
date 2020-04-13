@@ -13,8 +13,6 @@ def last_digit(f):
     pre, cur = cur, pre+cur
   return((cur-1)%10)
 
-test = int(input())
-for i in range(test):
-  f = int(input())
-  print(last_digit(f))
+f = int(input())
+print(last_digit(f))
 
