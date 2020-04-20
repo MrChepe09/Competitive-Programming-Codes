@@ -1,12 +1,13 @@
 def car_fuel(a, f, n):
   count = 0
   curr = 0
-  for i in range(1, n+1):
-    if(a[i-1]==curr and a[i]>(curr+f)):
+  for i in range(1, n+2):
+    if(a[i]>(a[i-1]+f)):
       return -1
-    elif(a[i+1]>(curr+f)):
-      curr = a[i]
+    elif(a[i]>(curr+f)):
+      curr = a[i-1]
       count+=1
+    #print(curr, count)
   return count
 
 dist = int(input())
