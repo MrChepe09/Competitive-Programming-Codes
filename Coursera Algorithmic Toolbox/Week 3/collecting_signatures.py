@@ -1,21 +1,20 @@
-def signature(m, n, a):
-  count = 0
-  ans = [0]*(m+1)
-  
-  for i in range(1, m+1):
-    t = 0
-    while(t<n):
-      if(i>=a[t][0] and i<=a[t][1]):
-        ans[i]+=1
-      t+=1
-  
+def signature(n, a):
+  a = sorted(a, key=lambda x: x[1])
+  ans = []
+  start = 0
+  while(start<n):
+    c = a[start]
+    while(start<n-1 and c[1]>=a[start+1][0]):
+      start+=1
+    ans.append(c[1])
+    start += 1
   return ans
 
 n = int(input())
 a = []
-m = 0
 for i in range(n):
   p = list(map(int, input().split()))
-  m = max(m, max(p))
   a.append(p)
-print(signature(m, n, a))
+z = signature(n, a)
+print(len(z))
+print(*z)
