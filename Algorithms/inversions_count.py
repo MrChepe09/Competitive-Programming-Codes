@@ -1,4 +1,4 @@
-#Answer 601309943
+#Answer 2407905288
 def countInversion(arr):
   if len(arr) == 1:
     return arr, 0
