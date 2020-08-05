@@ -8,6 +8,6 @@ Don't use them for Cheating Purposes.
 CodeChef Handle:- @mrchepecali | 
  LeetCode Handle:- @MrChepe09 | 
  HackerRank Handle:- @khanujabhupinde1 | 
- HackerEarth Handle:- @bhupinder22
+ HackerEarth Handle:- @bhupinder22 | 
  CodeForces Handle:- @MrChepe
 
