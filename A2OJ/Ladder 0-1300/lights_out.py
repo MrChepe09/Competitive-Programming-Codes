@@ -1,59 +1,29 @@
-def lights(a):
-    light = [[1 for _ in range(3)] for _ in range(3)]
-    for i in range(3):
-        for j in range(3):
-            if(a[i][j]%2==1):
-                if(i==0 and j==0):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i+1][j] = (light[i+1][j]+1) % 2
-                    light[i][j+1] = (light[i][j+1]+1) % 2
-                elif(i==0 and j==1):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i+1][j] = (light[i+1][j]+1) % 2
-                    light[i][j+1] = (light[i][j+1]+1) % 2
-                    light[i][j-1] = (light[i][j-1] + 1) % 2
-                elif(i==0 and j==2):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i+1][j] = (light[i+1][j]+1) % 2
-                    light[i][j-1] = (light[i][j-1] + 1) % 2
-                elif(i==1 and j==0):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i+1][j] = (light[i+1][j]+1) % 2
-                    light[i][j+1] = (light[i][j+1]+1) % 2
-                    light[i-1][j] = (light[i-1][j] + 1) % 2
-                elif(i==1 and j==1):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i+1][j] = (light[i+1][j]+1) % 2
-                    light[i][j+1] = (light[i][j+1]+1) % 2
-                    light[i-1][j] = (light[i-1][j] + 1) % 2
-                    light[i][j-1] = (light[i][j-1] + 1) % 2
-                elif(i==1 and j==2):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i-1][j] = (light[i-1][j]+1) % 2
-                    light[i][j-1] = (light[i][j-1]+1) % 2
-                    light[i+1][j] = (light[i+1][j] + 1)%2
-                elif(i==2 and j==0):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i+1][j] = (light[i+1][j]+1) % 2
-                    light[i][j+1] = (light[i][j+1]+1) % 2
-                    light[i-1][j] = (light[i-1][j] + 1) % 2
-                elif(i==2 and j==1):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i-1][j] = (light[i-1][j]+1) % 2
-                    light[i][j-1] = (light[i][j-1]+1) % 2
-                    light[i][j+1] = (light[i][j+1] + 1)%2
-                elif(i==2 and j==2):
-                    light[i][j] = (light[i][j]+1) % 2
-                    light[i-1][j] = (light[i-1][j]+1) % 2
-                    light[i][j-1] = (light[i][j-1]+1) % 2
-    return light
-
-
-
-a = []
+x=[[0,0,0,0,0]]
+def con(m):
+    if(m==0):
+        return 1
+    else:
+        return 0
 for i in range(3):
-    arr = list(map(int, input().split()))
-    a.append(arr)
-res = lights(a)
-for i in res:
-    print(''.join(map(str, i)))
+    x.append([0]+list(map(int,input().split()))+[0])
+x.append([0,0,0,0,0]) 
+ 
+y=[]
+for i in range(5):
+    a=[]
+    for j in range(5):
+        a.append(1)
+    y.append(a)    
+for i in range(1,4):
+    for j in range(1,4):
+        if(x[i][j]%2!=0):
+             
+            y[i][j]=con(y[i][j])
+            y[i][j-1]=con(y[i][j-1])
+            y[i][j+1]=con(y[i][j+1])
+            y[i-1][j]=con(y[i-1][j])
+            y[i+1][j]=con(y[i+1][j])
+for i in range(1,4):
+    for j in range(1,4):
+        print(y[i][j],end="")
+    print()    
