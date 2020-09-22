@@ -1,16 +1,8 @@
-from bisect import bisect_left
-def BinarySearch(a, x): 
-    i = bisect_left(a, x) 
-    if i != len(a) and a[i] == x: 
-        return i 
-    else: 
-        return -1
-
 def approach(n, ans):
-    global a
-    g = BinarySearch(a, n)
-    ans[0] += g+1
-    ans[1] += len(a)-g
+    global a, ind, b, m
+    for i in range(m):
+        ans[0] += ind[b[i]]+1
+        ans[1] += len(a)-ind[b[i]]
     return ans
 
 
@@ -18,7 +10,10 @@ n = int(input())
 a = list(map(int, input().split()))
 m = int(input())
 b = list(map(int, input().split()))
+ind = [0]*(len(a)+1)
+for i in range(len(a)):
+    ind[a[i]] = i
 ans = [0, 0]
-for i in b:
-    ans = approach(i, ans)
+#print(ind)
+ans = approach(n, ans)
 print(*ans)
