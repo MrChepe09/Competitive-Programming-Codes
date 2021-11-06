@@ -13,10 +13,12 @@ int main()
         cin >> arr[i];
         curr += arr[i];
     }
-    long long ori = 0;
+    long long original = 0;
     for (long long i = 1; i <= n; i++)
     {
-        ori += i;
+        original += i;
     }
-    cout << ori - curr;
+    cout << original - curr;
 }
+
+1 + 2 + 3 + 4 + 5 = 15 2 + 3 + 1 + 5 = 11 15 - 11 = 4
