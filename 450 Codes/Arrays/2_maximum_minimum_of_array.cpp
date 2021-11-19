@@ -1,3 +1,7 @@
+// Find the maximum and minimum of element in an array
+// Direct method is straight forward
+// Tournament method is Divide and Conquer
+// Set a ending condition - Divide the array in two from mid - Call function on both arrays - Compare the two results
 #include <iostream>
 using namespace std;
 

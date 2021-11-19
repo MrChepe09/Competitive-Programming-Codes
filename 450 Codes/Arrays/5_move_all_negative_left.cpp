@@ -1,3 +1,8 @@
+// Move all the negative elements to one side of array
+// same as sort 0-1-2
+// mid as iterator if negative change with low
+// if positive increment mid
+
 #include <iostream>
 using namespace std;
 
@@ -5,8 +10,7 @@ void negativeLeft(int n, int arr[])
 {
     int low = 0;
     int mid = 0;
-    int high = n - 1;
-    while (mid <= high)
+    while (mid < n)
     {
         if (arr[mid] < 0)
         {

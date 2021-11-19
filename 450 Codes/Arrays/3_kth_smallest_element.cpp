@@ -1,3 +1,5 @@
+// Find the Kth max and min of an array
+// refer QuickSort algorithm
 #include <iostream>
 using namespace std;
 
@@ -23,20 +25,17 @@ int partition(int arr[], int left, int right)
 
 int kthelement(int arr[], int left, int right, int k)
 {
-    if (k > 0 && k <= right - left + 1)
-    {
-        int pos = partition(arr, left, right);
+    int pos = partition(arr, left, right);
 
-        if (pos - left == k - 1)
-        {
-            return arr[pos];
-        }
-        if (pos - left > k - 1)
-        {
-            return kthelement(arr, left, pos - 1, k);
-        }
-        return kthelement(arr, pos + 1, right, k - pos + left - 1);
+    if (pos == k - 1)
+    {
+        return arr[pos];
     }
+    if (pos > k - 1)
+    {
+        return kthelement(arr, left, pos - 1, k);
+    }
+    return kthelement(arr, pos + 1, right, k);
     return INT16_MAX;
 }
 
