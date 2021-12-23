@@ -31,6 +31,23 @@ int profit(int n, int arr[])
     return dp[n - 1];
 }
 
+int profitAlt(int n, int arr[])
+{
+    int buy1, profit1, buy2, profit2;
+    buy1 = buy2 = INT16_MAX;
+    profit1 = profit2 = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        buy1 = min(buy1, arr[i]);
+        profit1 = max(profit1, arr[i] - buy1);
+        buy2 = min(buy2, arr[i] - profit1);
+        profit2 = max(profit2, arr[i] - buy2);
+    }
+
+    return profit2;
+}
+
 int main()
 {
     int n;

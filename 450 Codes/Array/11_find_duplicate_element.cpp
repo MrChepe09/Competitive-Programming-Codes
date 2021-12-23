@@ -1,3 +1,11 @@
+// Find the duplicate element in array
+// Sort method: Sort the array and find two consecutive same elements
+// Set Method: Insert elements of array one by one in a hasmap or set until
+// we find an element that already exists in that set.
+// Floyd Cycle: The hare and tortoise method. The algorithm is to move first pointer
+// single digits and second pointer double digits until both are same. The get the first pointer
+// back on start and move both pointers by one digit until both are same again. Return second.
+
 #include <iostream>
 #include <algorithm>
 #include <set>

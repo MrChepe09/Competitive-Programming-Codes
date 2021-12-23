@@ -1,3 +1,8 @@
+// Cyclically rotate array to right by 1
+// Save the last element in a variable
+// Move down each element from end one to the right
+// Replace the first element with the saved element
+
 #include <iostream>
 using namespace std;
 

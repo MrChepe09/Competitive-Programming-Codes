@@ -20,6 +20,9 @@ void sortarray(int arr1[], int arr2[], int m, int n)
     }
 }
 
+// 1 3 5 7 8
+// 2 4 6 9
+
 int main()
 {
     int n, m;

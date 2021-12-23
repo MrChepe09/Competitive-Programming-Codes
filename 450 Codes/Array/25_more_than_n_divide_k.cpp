@@ -49,7 +49,7 @@ void moreThanNdK(int n, int arr[], int k)
 
             if (l == k - 1)
             {
-                for (l = 0; l < k; l++)
+                for (l = 0; l < k - 1; l++)
                 {
                     temp[l].c--;
                 }
@@ -66,8 +66,8 @@ void moreThanNdK(int n, int arr[], int k)
             {
                 ac++;
             }
+            //cout << ac;
         }
-        //cout << ac;
         if (ac > n / k)
         {
             cout << "Number: " << temp[i].e << " Count: " << ac << endl;
