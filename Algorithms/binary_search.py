@@ -9,7 +9,7 @@ def binarySearch(a, l, r, k):
       l = mid + 1
   return -1
 
-test = int(input())
+test = int(input()) 
 for i in range(test):
   n = int(input())
   a = list(map(int, input().split()))
